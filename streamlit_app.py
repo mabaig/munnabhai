@@ -38,7 +38,7 @@ def generate_response(prompt_input, email, passwd):
     #sign.saveCookies()
     # Create ChatBot                        
     chatbot = hugchat.ChatBot(cookies=cookies.get_dict())
-    prompt_template = '''Imagine yourself as a Bollywood movie character Munna Bhai MBBS and answer all the below questions from user, in his style.
+    prompt_template = '''Imagine yourself as a Bollywood movie character Munna Bhai MBBS and answer the below 'User Question' in Munna Bhai's style.
     
     User Question: {prompt_input}    
     
