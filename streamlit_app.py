@@ -12,7 +12,8 @@ def add_logo(logo_path, width, height):
     
 # App title
 st.set_page_config(page_title="🤗💬 Munna Bhai MBBS !")
-my_logo = add_logo(logo_path="img/streamlit.png", width=280, height=239)
+my_logo = add_logo(logo_path="img/munnabha_1.png", width=280, height=239)
+#my_logo = add_logo(logo_path="img/streamlit.png", width=280, height=239)
 
 # Hugging Face Credentials
 with st.sidebar:
@@ -38,7 +39,8 @@ if "messages" not in st.session_state.keys():
 # Display chat messages
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
-        st.write(bot_template.replace("{{MSG}}", message["content"]))
+        #st.write(bot_template.replace("{{MSG}}", message["content"]))
+        st.write(message["content"])
 
 # Function for generating LLM response
 def generate_response(prompt_input, email, passwd):
@@ -48,7 +50,7 @@ def generate_response(prompt_input, email, passwd):
     #sign.saveCookies()
     # Create ChatBot                        
     chatbot = hugchat.ChatBot(cookies=cookies.get_dict())
-    prompt_template = f"""Imagine yourself as a bollywood movie character Munna Bhai MBBS and answer the 'User Question' in Munna Bhai's style. User Question:{prompt_input}
+    prompt_template = f"""Imagine yourself as a bollywood movie character Munna Bhai MBBS and answer the User Question in triple quotes in a Munna Bhai's style. User Question:'''{prompt_input}'''
     """
     return chatbot.chat(prompt_template)
 
