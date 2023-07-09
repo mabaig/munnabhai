@@ -3,11 +3,11 @@ from hugchat import hugchat
 from hugchat.login import Login
 
 # App title
-st.set_page_config(page_title="🤗💬 HugChat")
+st.set_page_config(page_title="🤗💬 Munna Bhai MBBS")
 
 # Hugging Face Credentials
 with st.sidebar:
-    st.title('🤗💬 Chat with Munna Bhai MBBS')
+    st.title('🤗💬 Chat with Bhai')
     if ('EMAIL' in st.secrets) and ('PASS' in st.secrets):
         st.success('HuggingFace Login credentials already provided!', icon='✅')
         hf_email = st.secrets['EMAIL']
@@ -19,11 +19,11 @@ with st.sidebar:
             st.warning('Please enter your credentials!', icon='⚠️')
         else:
             st.success('Proceed to entering your prompt message!', icon='👉')
-    st.markdown('📖 Learn how to build this app in this [blog](https://blog.streamlit.io/how-to-build-an-llm-powered-chatbot-with-streamlit/)!')
+    st.markdown('📖 My LinkedIn Profile [blog](https://www.linkedin.com/in/mbaig162/)!')
     
 # Store LLM generated responses
 if "messages" not in st.session_state.keys():
-    st.session_state.messages = [{"role": "assistant", "content": "How may I help you?"}]
+    st.session_state.messages = [{"role": "assistant", "content": "Tension nahi leneka, bhai. Batao, apun kaise madad kar sakta hai?"}]
 
 # Display chat messages
 for message in st.session_state.messages:
@@ -38,7 +38,12 @@ def generate_response(prompt_input, email, passwd):
     #sign.saveCookies()
     # Create ChatBot                        
     chatbot = hugchat.ChatBot(cookies=cookies.get_dict())
-    return chatbot.chat(prompt_input)
+    prompt_template = '''Imagine yourself as a Bollywood movie character Munna Bhai MBBS and answer all the below questions from user, in his style.
+    
+    User Question: {prompt_input}    
+    
+    '''
+    return chatbot.chat(prompt_template)
 
 # User-provided prompt
 if prompt := st.chat_input(disabled=not (hf_email and hf_pass)):
@@ -50,7 +55,7 @@ if prompt := st.chat_input(disabled=not (hf_email and hf_pass)):
 if st.session_state.messages[-1]["role"] != "assistant":
     #with st.chat_message("assistant"):
     with st.chat_message("assistant"):
-        with st.spinner("Thinking..."):
+        with st.spinner("Bhai, abhi thoda time lagega, apun soch raha hai..."):
             response = generate_response(prompt, hf_email, hf_pass) 
             st.write(response) 
     message = {"role": "assistant", "content": response}
