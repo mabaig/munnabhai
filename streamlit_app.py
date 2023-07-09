@@ -12,7 +12,7 @@ def add_logo(logo_path, width, height):
     
 # App title
 st.set_page_config(page_title="🤗💬 Munna Bhai MBBS !")
-my_logo = add_logo(logo_path="img/munnabha_1.png", width=280, height=239)
+my_logo = add_logo(logo_path="img/munnabha_1.jpg", width=280, height=239)
 #my_logo = add_logo(logo_path="img/streamlit.png", width=280, height=239)
 
 # Hugging Face Credentials
