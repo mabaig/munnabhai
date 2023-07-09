@@ -15,7 +15,7 @@ def add_logo(logo_path, width, height):
     return modified_logo
     
 # Application title
-st.set_page_config(page_title="🩺💬 Munna Bhai MBBS ! - Baig")
+st.set_page_config(page_title="🩺💬 Munna Bhai MBBS ! - Baig", layout="wide)
 my_logo = add_logo(logo_path="img/munnabhai_1.jpg", width=280, height=239)
 #my_logo = add_logo(logo_path="img/streamlit.png", width=280, height=239)
 
