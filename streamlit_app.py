@@ -39,7 +39,7 @@ if "messages" not in st.session_state.keys():
 # Display chat messages
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
-        #st.write(bot_template.replace("{{MSG}}", message["content"]))
+        #st.write(bot_template.replace("{{MSG}}", message["content"]), unsafe_allow_html=True)
         st.write(message["content"])
 
 # Function for generating LLM response
@@ -58,7 +58,7 @@ def generate_response(prompt_input, email, passwd):
 if prompt := st.chat_input(disabled=not (hf_email and hf_pass)):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
-        st.write(user_template.replace("{{MSG}}", prompt))
+        st.write(user_template.replace("{{MSG}}", prompt), unsafe_allow_html=True)
 
 # Generate a new response if last message is not from assistant
 if st.session_state.messages[-1]["role"] != "assistant":
@@ -66,6 +66,6 @@ if st.session_state.messages[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
         with st.spinner("Bhai, abhi thoda time lagega, apun soch raha hai..."):
             response = generate_response(prompt, hf_email, hf_pass) 
-            st.write(bot_template.replace("{{MSG}}", response))
+            st.write(bot_template.replace("{{MSG}}", response), unsafe_allow_html=True)
     message = {"role": "assistant", "content": response}
     st.session_state.messages.append(message)
