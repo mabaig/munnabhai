@@ -3,7 +3,7 @@ from hugchat import hugchat
 from hugchat.login import Login
 
 # App title
-st.set_page_config(page_title="🤗💬 Munna Bhai MBBS")
+st.set_page_config(page_title="🤗💬 Munna Bhai MBBS !")
 
 # Hugging Face Credentials
 with st.sidebar:
@@ -23,7 +23,7 @@ with st.sidebar:
     
 # Store LLM generated responses
 if "messages" not in st.session_state.keys():
-    st.session_state.messages = [{"role": "assistant", "content": "Tension nahi leneka, bhai. Batao, apun kaise madad kar sakta hai?"}]
+    st.session_state.messages = [{"role": "assistant", "content": "Tension nahi leneka, bhai !   Batao, apun kaise madad kar sakta hai?"}]
 
 # Display chat messages
 for message in st.session_state.messages:
@@ -38,15 +38,16 @@ def generate_response(prompt_input, email, passwd):
     #sign.saveCookies()
     # Create ChatBot                        
     chatbot = hugchat.ChatBot(cookies=cookies.get_dict())
-    prompt_template = f"""Imagine yourself as a Bollywood movie character Munna Bhai MBBS and answer the below 'User Question' in Munna Bhai's style.
-    User Question:{prompt_input}"""
+    prompt_template = f"""Imagine yourself as a bollywood movie character Munna Bhai MBBS and answer the 'User Question' in Munna Bhai's style in hindi. User Question:{prompt_input}
+    """
     return chatbot.chat(prompt_template)
 
 # User-provided prompt
 if prompt := st.chat_input(disabled=not (hf_email and hf_pass)):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
-        st.write(prompt)
+        st.write(bot_template.replace(
+                "{{MSG}}", prompt), unsafe_allow_html=True)
 
 # Generate a new response if last message is not from assistant
 if st.session_state.messages[-1]["role"] != "assistant":
