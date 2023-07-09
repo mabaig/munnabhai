@@ -45,7 +45,7 @@ if "messages" not in st.session_state.keys():
             <div class="message">Tension nahi leneka, bhai !   Batao, apun kaise madad kar sakta hai?</div>
         </div>
         '''
-    #st.session_state.messages = [{"role": "assistant", "content": "Tension nahi leneka, bhai !   Batao, apun kaise madad kar sakta hai?"}]
+    st.session_state.messages = [{"role": "assistant", "content": initial_content}]
 
 # Display chat messages
 for message in st.session_state.messages:
