@@ -47,8 +47,7 @@ def generate_response(prompt_input, email, passwd):
 if prompt := st.chat_input(disabled=not (hf_email and hf_pass)):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
-        st.write(bot_template.replace(
-                "{{MSG}}", prompt), unsafe_allow_html=True)
+        st.write(user_template.replace("{{MSG}}", prompt), unsafe_allow_html=True)
 
 # Generate a new response if last message is not from assistant
 if st.session_state.messages[-1]["role"] != "assistant":
@@ -56,6 +55,6 @@ if st.session_state.messages[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
         with st.spinner("Bhai, abhi thoda time lagega, apun soch raha hai..."):
             response = generate_response(prompt, hf_email, hf_pass) 
-            st.write(response) 
+            st.write(bot_template.replace("{{MSG}}", response), unsafe_allow_html=True)
     message = {"role": "assistant", "content": response}
     st.session_state.messages.append(message)
