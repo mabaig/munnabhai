@@ -1,6 +1,7 @@
 import streamlit as st
 from hugchat import hugchat
 from hugchat.login import Login
+from PIL import Image
 from botTemplates import css, bot_template, user_template
 
 def add_logo(logo_path, width, height):
