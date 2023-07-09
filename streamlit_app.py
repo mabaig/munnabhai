@@ -1,6 +1,7 @@
 import streamlit as st
 from hugchat import hugchat
 from hugchat.login import Login
+from botTemplates import css, bot_template, user_template
 
 # App title
 st.set_page_config(page_title="🤗💬 Munna Bhai MBBS !")
