@@ -3,9 +3,15 @@ from hugchat import hugchat
 from hugchat.login import Login
 from botTemplates import css, bot_template, user_template
 
+def add_logo(logo_path, width, height):
+    """Read and return a resized logo"""
+    logo = Image.open(logo_path)
+    modified_logo = logo.resize((width, height))
+    return modified_logo
+    
 # App title
 st.set_page_config(page_title="🤗💬 Munna Bhai MBBS !")
-my_logo = add_logo2(logo_path="Logo_BG.png", width=280, height=239)
+my_logo = add_logo(logo_path="img/streamlit.png", width=280, height=239)
 
 # Hugging Face Credentials
 with st.sidebar:
