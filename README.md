@@ -13,6 +13,11 @@ This app is an LLM-powered chatbot built using Streamlit and HugChat.
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://hugchat.streamlit.app/)
 
+## My LinkedIn Profile
+
+👨‍💻[![LinkedIn Profile](https://www.linkedin.com/in/mbaig162/)
+
+
 ## Disclaimer
 The following disclaimer is from the GitHub repo from the authors of the [HugChat](https://github.com/Soulter/hugging-chat-api) port.
 > When you use this project, it means that you have agreed to the following two requirements of the HuggingChat:
