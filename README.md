@@ -15,7 +15,7 @@ This app is an LLM-powered chatbot built using Streamlit and HugChat.
 
 ## My LinkedIn Profile
 
-👨‍💻[![LinkedIn Profile](👨‍💻)](https://www.linkedin.com/in/mbaig162/)
+👨‍💻[LinkedIn Profile](https://www.linkedin.com/in/mbaig162/)
 
 
 ## Disclaimer
