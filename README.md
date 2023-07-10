@@ -1,4 +1,4 @@
-# 🤗💬 HugChat App
+# 🤗💬 Chat with Munna Bhai App 🩺
 ```
 This app is an LLM-powered chatbot built using Streamlit and HugChat.
 ```
