@@ -39,7 +39,7 @@ with st.sidebar:
     st.markdown('👨‍💻 [My LinkedIn Profile](https://www.linkedin.com/in/mbaig162/)')
     st.markdown('🔥 Generative AI - Image to Speech [demo](https://www.loom.com/share/1a39ba984dbc4f8d98255bc19cf98255?sid=5f322694-1162-45c5-a63f-03f9127b94c9/)')
     st.markdown('💬 Chat with your document [demo](https://www.loom.com/share/a0175fbad3024c52aecb4aa92754ad74?sid=acf6a0ca-e355-41d6-a045-860f9caf9974/)')
-    st.markdown('📖 Learn to build this app [dataprofessor blog](https://blog.streamlit.io/how-to-build-an-llm-powered-chatbot-with-streamlit/)')   
+    st.markdown('📖 Learn to build this app [dataprofessor](https://blog.streamlit.io/how-to-build-an-llm-powered-chatbot-with-streamlit/)')   
     st.sidebar.write("""
          ######
          ###### Crafted and Developed by Baig
