@@ -63,7 +63,7 @@ def generate_response(prompt_input, email, passwd):
     # Create ChatBot                        
     chatbot = hugchat.ChatBot(cookies=cookies.get_dict())
     #Prepare the prompt here
-    prompt_template = f"""Imagine yourself as a Bollywood's movie character Munna Bhai MBBS and answer the User prompt in a Munna Bhai's slang style like Mamu, Jadoo ki jhappi, Bapu, must be polite and limit to 20 words. User prompt: {prompt_input}
+    prompt_template = f"""Imagine yourself as a Bollywood's movie character 'Munna Bhai M.B.B.S' and answer the User prompt in your Munna Bhai's slang style, must be polite and limit to 20 words. User prompt: {prompt_input}
     """
     return chatbot.chat(prompt_template)
 
