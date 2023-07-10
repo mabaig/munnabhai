@@ -35,7 +35,7 @@ with st.sidebar:
         if not (hf_email and hf_pass):
             st.warning('Please enter your credentials!', icon='⚠️')
         else:
-            st.success('Proceed to entering your prompt message!', icon='👉')             
+            st.success('Proceed with your message!', icon='👉')             
     st.markdown('👨‍💻 [My LinkedIn Profile](https://www.linkedin.com/in/mbaig162/)')
     st.markdown('🔥 Generative AI - Image to Speech [demo](https://www.loom.com/share/1a39ba984dbc4f8d98255bc19cf98255?sid=5f322694-1162-45c5-a63f-03f9127b94c9/)')
     st.markdown('💬 Chat with your document [demo](https://www.loom.com/share/a0175fbad3024c52aecb4aa92754ad74?sid=acf6a0ca-e355-41d6-a045-860f9caf9974/)')
