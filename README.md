@@ -7,7 +7,7 @@ This app is an LLM-powered chatbot built using Streamlit and HugChat.
 
 ## Chat with Munna Bhai Live App
 
-[![Chat with Munna Bhai](https://munnabhai-vbypjgtarsg.streamlit.app/)
+[![Chat with Munna Bhai](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://munnabhai-vbypjgtarsg.streamlit.app/)
 
 ## Streamlit Demo App
 
