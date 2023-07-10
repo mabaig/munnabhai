@@ -16,7 +16,7 @@ def add_logo(logo_path, width, height):
 
 my_logo = add_logo(logo_path="img/munnabhai_1.jpg", width=280, height=239)
 #my_logo = add_logo(logo_path="img/streamlit.png", width=280, height=239)
-favicon = Image.open("favicon.ico")
+favicon = Image.open("img/favicon.ico")
 # Application title
 st.set_page_config(page_title="🩺💬 Munna Bhai MBBS ! - Baig", layout="wide", page_icon=favicon)
 
